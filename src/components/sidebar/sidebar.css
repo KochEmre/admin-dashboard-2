@@ -18,6 +18,7 @@
 .sidebarTitle{
     font-size: 14px;
     color: #6d86ac;
+    margin-bottom: 8px;
 }
 
 .sidebarList{
@@ -26,7 +27,7 @@
 }
 
 .sidebarListItem{
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     padding: 6px 10px;
     font-size: 15px;
     cursor: pointer;
@@ -36,7 +37,7 @@
 }
 
 .sidebarListItem.active, .sidebarListItem:hover{
-    background-color: #caf6ff;
+    background-color: #b9d3ff;
 }
 
 .sidebarIcon{
