@@ -1,4 +1,6 @@
 import "./userList.css";
+import { DataGrid } from "@material-ui/data-grid";
+import { MdDeleteOutline } from "react-icons/md";
 import { userRows } from "../../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -7,7 +9,7 @@ export default function UserList() {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    setData(data.filter((item) => item.id !== id)); /* id deki datayı filterliyor, kalanını dönderiyor. Yani onu silmiş oluyor.*/
   };
   
   const columns = [
@@ -17,6 +19,7 @@ export default function UserList() {
       headerName: "User",
       width: 200,
       renderCell: (params) => {
+
         return (
           <div className="userListUser">
             <img className="userListImg" src={params.row.avatar} alt="" />
@@ -46,10 +49,10 @@ export default function UserList() {
             <Link to={"/user/" + params.row.id}>
               <button className="userListEdit">Edit</button>
             </Link>
-            {/* <DeleteOutline
+            <MdDeleteOutline
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
-            /> */}
+            />
           </>
         );
       },
@@ -58,13 +61,13 @@ export default function UserList() {
 
   return (
     <div className="userList">
-      {/* <DataGrid
+      <DataGrid
         rows={data}
         disableSelectionOnClick
         columns={columns}
         pageSize={8}
         checkboxSelection
-      /> */}
+      />
     </div>
   );
 }

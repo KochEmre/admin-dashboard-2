@@ -4,6 +4,7 @@ import "./app.css";
 import Home from "./components/pages/home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UserList from "./components/pages/userList/UserList";
+import User from "./components/pages/user/User";
 
 function App() {
   return (
@@ -11,10 +12,13 @@ function App() {
       <Topbar />
       <div className="container">
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="users/*" element={<UserList />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="users/*" element={<UserList />} />
+            <Route path="user/:UserId" element={<User />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

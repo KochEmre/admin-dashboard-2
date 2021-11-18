@@ -6,3 +6,7 @@
     flex: 4;
     background-color: azure;
 }
+
+.content{
+    flex: 5;
+}
