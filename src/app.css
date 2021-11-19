@@ -5,3 +5,8 @@
 .content{
     flex: 5;
 }
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
