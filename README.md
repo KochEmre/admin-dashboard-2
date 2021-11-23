@@ -1,3 +1,5 @@
+This is my second admin dashboard application. This is not responsive design yet. 
+
 https://kochemre.github.io/admin-dashboard-2/
 
 # Getting Started with Create React App
