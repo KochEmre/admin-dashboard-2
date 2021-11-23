@@ -1,4 +1,4 @@
-This is my second admin dashboard application. This is not responsive design yet. 
+This is my second admin dashboard application. It doesn't have a responsive design yet. 
 
 https://kochemre.github.io/admin-dashboard-2/
 
